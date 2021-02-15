@@ -1,0 +1,189 @@
+{
+  "store.home": {
+    "blocks": [
+      "list-context.image-list#demo",
+      /* You can make references to blocks defined in other files.
+       * For example, `flex-layout.row#deals` is defined in the `deals.json` file. */
+      "__fold__.experimentalLazyAssets",
+      // "flex-layout.row#deals",
+      // "countdown",
+      "flex-layout.row#filterProduct",
+      "rich-text#shelf-title",
+      "flex-layout.row#shelf",
+      "rich-text#storeLocator",
+      "flex-layout.row#storeLocator"
+
+      // "vtex.store-locator"
+      // "info-card#home",
+      // "rich-text#question",
+      // "rich-text#link",
+      // "newsletter"
+    ]
+  },
+
+  "list-context.image-list#demo": {
+    "children": ["slider-layout#demo-images"],
+    "props": {
+      "height": 720,
+      "images": [
+        {
+          "image": "https://www.contishop.com.mx/images/slider/banner_coyote.jpg",
+          "mobileImage": "https://www.contishop.com.mx/images/slider/banner_coyote.jpg"
+        },
+        {
+          "image": "https://www.contishop.com.mx/images/slider/banner_coyote.jpg",
+          "mobileImage": "https://www.contishop.com.mx/images/slider/banner_coyote.jpg"
+        }
+      ]
+    }
+  },
+  "slider-layout#demo-images": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "desktopOnly",
+      "fullWidth": true
+    }
+  },
+
+  "rich-text#shelf-title": {
+    "props": {
+      "text": "## Productos destacados",
+      "blockClass": "shelfTitle"
+    }
+  },
+  "flex-layout.row#shelf": {
+    "children": ["list-context.product-list#demo1"],
+    "props":{
+      "blockClass": "listProducts"
+    }
+  },
+  "list-context.product-list#demo1": {
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#demo-products"],
+    "props": {
+      "orderBy": "OrderByPriceDESC"
+    }
+  },
+  "slider-layout#demo-products": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 3,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": "shelf"
+    }
+  },
+  "flex-layout.row#filterProduct": {
+    "children": ["flex-layout.col#filterBranch","flex-layout.col#filterAttribute"],
+    "props" : {
+      "blockClass":"productDetail"
+    }
+  },
+  "flex-layout.col#filterBranch":{
+    "children":[
+      "countdown"
+
+    ]
+  },
+  "flex-layout.col#filterAttribute":{
+    "children":[
+      "image#filterProduct"
+    ]
+  },
+
+  "image#filterProduct": {
+    "props": {
+      "src": "assets/filterProduct.png"
+    }
+  },
+
+  // "flex-layout.col#filterBranch": {
+  //   "children": ["image#detailProduct"],
+  //   "props" : {
+  //     "blockClass":"productDetail"
+  //   }
+  // },
+
+  "flex-layout.row#productDetail": {
+    "children": ["image#detailProduct"],
+    "props" : {
+      "blockClass":"productDetail"
+    }
+  },
+
+  "image#detailProduct": {
+    "props": {
+      "src": "assets/detailProduct.png"
+    }
+  },
+
+  "flex-layout.row#localeStore": {
+    "children": ["rich-text#storeLocator"]
+  },
+
+  "rich-text#storeLocator": {
+    "props": {
+      "text": "## Localiza una Tienda",
+      "blockClass": "shelfTitle"
+    }
+  },
+
+  "info-card#home": {
+    "props": {
+      "id": "info-card-home",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "https://prntscr.com/z1kr4p",
+      "headline": "Clearance Sale",
+      "callToActionText": "DISCOVER",
+      "callToActionUrl": "/sale/d",
+      "blockClass": "info-card-home",
+      "textAlignment": "center"
+    }
+  },
+
+  "rich-text#question": {
+    "props": {
+      "text": "**This is an example store built using the VTEX platform.\nWant to know more?**",
+      "blockClass": "question"
+    }
+  },
+
+  "rich-text#link": {
+    "props": {
+      "text": "\n**Reach us at**\nwww.vtex.com.br",
+      "blockClass": "link"
+    }
+  },
+  "flex-layout.row#storeLocator": {
+    "children": [      "shopper-location"],
+    "props" : {
+      "blockClass":"productDetail",
+      "fullWidth": true
+    }
+  }
+  // "flex-layout.row#form": {
+  //   "children": [
+  //     "flex-layout.col#form"
+  //   ]
+  // },
+  // "flex-layout.col#form": {
+  //   "children": [
+  //     "form"
+  //   ]
+  // },
+  // "form": {
+  //   "props": {
+  //     "entity": "clients",
+  //     "schema": "person"
+  //   }
+  // }
+}

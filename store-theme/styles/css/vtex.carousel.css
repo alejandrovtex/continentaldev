@@ -1,0 +1,7 @@
+.containerImg {
+  background-color: #000;
+}
+
+.containerImg .img {
+  max-width: 1520px;
+}
