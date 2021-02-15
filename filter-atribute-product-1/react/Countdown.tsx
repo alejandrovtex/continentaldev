@@ -13,7 +13,7 @@ const Countdown: StorefrontFunctionComponent<CountdownProps> = ({ }) => {
   const handles = useCssHandles(CSS_HANDLES)
 
   const brandCars = [
-    { value: 'volkswagen', label: 'Volkswagen'}
+    { value: 'volkswagen', label: 'Volkswagen' }
   ]
 
   const models = [
